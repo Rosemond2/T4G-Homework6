@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title><script src="https://kit.fontawesome.com/acaf0f8a1e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
@@ -11,13 +11,51 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="../Pages/Product.html">Products</a></li>
             <li><a href="../Pages/Contact.html">Contact</a></li>
-            <li><a href="Pages/Login.html">Login</a></li>
+            <li><a href="Pages/Login.html">Login<i class="fa-solid fa-right-to-bracket"></i></a></li>
             <li><a href="../Pages/Signup.html">Signup</a></li>
         </ul>
     </nav>
-    <h1>This is the Login Page</h1>
+    <h1>Login Page</h1>
     <p>Welcome! Welcome! Welcome!😊</p>
-    <h3>Login is under construction</h3>
-    
+    <h3>Login Page</h3>
+    <form action="/submit_form" method="post" id="myForm">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Email" required><br>
+        <label for="Password">Password</label><br>
+        <input type="text" id="password" name="password" placeholder="password" required><i id="togglePassword" class="fas fa-eye-slash"></i><br>
+        <input type="submit" value="submit" onclick="submitAndReload()">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        
+        <script>
+            const togglePassword = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('password');
+          
+            togglePassword.addEventListener('click', function() {
+              if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                this.classList.remove('fa-eye-slash');
+                this.classList.add('fa-eye');
+              } else {
+                passwordInput.type = "password";
+                this.classList.remove('fa-eye');
+                this.classList.add('fa-eye-slash');
+              }
+            });
+          </script>
+
+    </form>
+
+    <hr>
+    <div>   
+        <footer>
+            <b>Please follow us on our socials</b>👍👍
+           <p><i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </p>
+        </footer>
+    </div>
 </body>
 </html>
