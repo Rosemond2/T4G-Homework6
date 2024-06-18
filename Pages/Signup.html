@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head .submit-button {
+  background-color: #007bff; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup-page</title><script src="https://kit.fontawesome.com/acaf0f8a1e.js" crossorigin="anonymous"></script>
@@ -50,23 +57,11 @@
     <input type="password" name="password" id="password" required><br>
     <label for="confirmPassword">Re-enter Password</label>
     <input type="password" name="confirmPassword" id="confirmPassword" required><br>
-    <input type="submit" value="submit" onclick="submitAndReload()">
-
-<script>
-  const passwordInput = document.getElementById('password');
-  const confirmPasswordInput = document.getElementById('confirmPassword');
-  const submitButton = document.getElementById('signupForm').querySelector('input[type="submit"]');
-
-  confirmPasswordInput.addEventListener('keyup', function() {
-    if (passwordInput.value === confirmPasswordInput.value) {
-      submitButton.disabled = false;  // Enable submit button if passwords match
-    } else {
-      submitButton.disabled = true;   // Disable submit button if passwords don't match
-    }
-  });
-</script>
-
-<hr>
+    <div>
+      <input type="reset" value="Send" class="submit-button">
+    </div>
+   
+  <hr>
 <div>   
     <footer>
         <b>Please follow us on our socials</b>👍👍

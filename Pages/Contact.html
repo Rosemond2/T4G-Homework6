@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head 
+.submit-button {
+    background-color: #007bff; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  } >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title><script src="https://kit.fontawesome.com/acaf0f8a1e.js" crossorigin="anonymous"></script>
+
+    
 </head>
 <body>
     <nav>
@@ -18,29 +28,19 @@
     <h1>This is the Contact Us Page</h1>
     <p>I don't have a lot going on here for now, but <a href="../Pages/Login.html"><button><u>click to Login</u></button></a></p>
     
-   
     <form action="/submit_form" method="post" id="myForm">
         <label for="name">Your name:</label>
         <input type="text" id="name" name="name" placeholder="Your Full Name" required><br>
-       <label for="email">Email:</label>
+        <label for="email">Email:</label>
         <input type="email" name="email" id="email" placeholder="Email" required><br>
         <label for="message"></label>
         <textarea name="message" id="message" rows="4" cols="50" placeholder="Enter text here"></textarea><br>
-        <input type="submit" value="submit" onclick="submitAndReload()">
-
-        <script>
-            function submitAndReload() {
-              // Submit the form programmatically (optional)
-              // document.getElementById('myForm').submit();
-        
-              // Reload the page after a brief delay (optional)
-              setTimeout(function() {
-                location.reload();
-              }, 1000); // Reload after 1 second (you can adjust the delay)
-            }
-          </script>
+       <div>
+        <input type="reset" value="Send" class="submit-button">
+      </div>
+      
     </form>
-    <hr>
+      <hr>
     <div>   
         <footer>
             <b>Please follow us on our socials</b>👍👍
