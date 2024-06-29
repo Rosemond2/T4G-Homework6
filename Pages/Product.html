@@ -38,21 +38,68 @@
             
         }
 
+        .rose {
+         float: right; /* Floats elements to the left */
+         list-style: none; /* Removes default bullet points */
+         margin-left: 600px; /* Adds spacing between links */
+         justify-content: flex-end;
+         margin-bottom: 80px;
 
-      </style>
+       }
+      
+      header {
+        display: flex;
+        align-items: center;  /* Vertically aligns logo and navigation */
+      }
+
+      header a {
+       margin-right: 20px;  /* Adds space between navigation items */
+       text-decoration: none;  /* Removes underline */
+       color: #000;  /* Set default color (replace with your preference) */
+       display: inline-block;
+       padding: 10px 15px;  /* Adjust padding for desired box size */
+       border: 2px solid #ccc;  /* Set border color (gray here) */
+       margin-right: 10px;  /* Add spacing between links */
+      }
+     
+      header a:hover {
+       background-color: #eee;  /* Set hover background color (light gray here) */
+       color: #333;  /* Set hover text color (darker gray here) */
+      }
+     
+      .soap{
+        display: inline;
+        align-items: center;
+      }
+
+      .soap img {
+        margin-left: 300px;  /* Pushes image to right edge */
+        
+      }
+      footer{
+        font-size: 25px;
+      }
+
+
+ </style>
 </head>
 <body>
     <div class="code-block" id="code-block">
+        <header>
+            <img src="../Images/logokc.png" alt="This is the image of a logo">
+            <div class="rose" id="rose">
     <nav>
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="Pages/Product.html">Products</a></li>
-            <li><a href="../Pages/Contact.html">Contact</a></li>
-            <li><a href="../Pages/Login.html">Login</a></li>
-            <li><a href="../Pages/Signup.html">Signup</a></li>
+            <a href="../index.html">Home</a></li>
+            <a href="Pages/Product.html" style="background-color: #000; color: #ccc;">Products</a>
+            <a href="../Pages/Contact.html">Contact</a>
+            <a href="../Pages/Login.html">Login</a>
+            <a href="../Pages/Signup.html">Signup</a>
         </ul>
     </nav>
-   
+    </div>
+    </header>
+  
     <div class="run" id="run">
     <h1>Our Raw Food Products</h1>
   </div>
@@ -92,12 +139,15 @@
     <hr>
             <div>   
                 <footer>
+                    <div class="soap" id="soap">
                     <b>Please follow us on our socials</b>👍👍
                    <p><i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-twitter"></i>
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-linkedin"></i>
                 </p>
+                <img src="../Images/logokc.png" alt="This is the image of a logo">
+            </div>
                 </footer>
             </div>
 

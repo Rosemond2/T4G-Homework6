@@ -11,7 +11,7 @@
 }>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title><script src="https://kit.fontawesome.com/acaf0f8a1e.js" crossorigin="anonymous"></script>
+    <title>Login page</title><script src="https://kit.fontawesome.com/acaf0f8a1e.js" crossorigin="anonymous"></script>
     <style>
         body {
           background-image: url("../Images/mountains.jpg");
@@ -27,19 +27,54 @@
          padding: 10px;  /* Add some padding for readability */
         }
 
+        .rose {
+         float: right; /* Floats elements to the left */
+         list-style: none; /* Removes default bullet points */
+         margin-left: 550px; /* Adds spacing between links */
+         justify-content: flex-end;
+         margin-bottom: 80px;
+
+       }
+      
+      header {
+        display: flex;
+        align-items: center;  /* Vertically aligns logo and navigation */
+      }
+
+      header a {
+       margin-right: 20px;  /* Adds space between navigation items */
+       text-decoration: none;  /* Removes underline */
+       color: #000;  /* Set default color (replace with your preference) */
+       display: inline-block;
+       padding: 10px 15px;  /* Adjust padding for desired box size */
+       border: 2px solid #ccc;  /* Set border color (gray here) */
+       margin-right: 10px;  /* Add spacing between links */
+      }
+     
+      header a:hover {
+       background-color: #eee;  /* Set hover background color (light gray here) */
+       color: #333;  /* Set hover text color (darker gray here) */
+      }
+
       </style>
 </head>
 <body>
     <div class="code-block" id="code-block">
+      <header>
+        <img src="../Images/logokc.png" alt="This is the image of a logo">
+        <div class="rose" id="rose">
   <nav>
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../Pages/Product.html">Products</a></li>
-            <li><a href="../Pages/Contact.html">Contact</a></li>
-            <li><a href="Pages/Login.html">Login<i class="fa-solid fa-right-to-bracket"></i></a></li>
-            <li><a href="../Pages/Signup.html">Signup</a></li>
+            <a href="../index.html">Home</a>
+            <a href="../Pages/Product.html">Products</a>
+            <a href="../Pages/Contact.html">Contact</a>
+            <a href="Pages/Login.html" style="background-color: #000; color: #ccc;">Login<i class="fa-solid fa-right-to-bracket"></i></a>
+            <a href="../Pages/Signup.html">Signup</a>
         </ul>
     </nav>
+    </div>
+    </header>
+
     <h1>Login Page</h1>
     <p>Welcome! Welcome! Welcome!😊</p>
     <h3>Login Page</h3>

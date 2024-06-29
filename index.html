@@ -25,7 +25,7 @@
           width: 500px;
           background-repeat: no-repeat;
           text-align: center;
-          font-size: large;
+          font-size: 30px;
           border: 30px solid black;
           border-radius: 20px;
           justify-content: center;
@@ -57,26 +57,75 @@
         text-decoration: none;
         font-size: 25px;
        }
-        
-     </style>
+       
+       .rose {
+         float: right; /* Floats elements to the left */
+         list-style: none; /* Removes default bullet points */
+         margin-left: 600px; /* Adds spacing between links */
+         justify-content: flex-end;
+         margin-bottom: 80px;
+
+       }
+      
+      header {
+        display: flex;
+        align-items: center;  /* Vertically aligns logo and navigation */
+      }
+
+      header a {
+       margin-right: 20px;  /* Adds space between navigation items */
+       text-decoration: none;  /* Removes underline */
+       color: #000;  /* Set default color (replace with your preference) */
+       display: inline-block;
+       padding: 10px 15px;  /* Adjust padding for desired box size */
+       border: 2px solid #ccc;  /* Set border color (gray here) */
+       margin-right: 10px;  /* Add spacing between links */
+      }
+     
+      header a:hover {
+       background-color: #eee;  /* Set hover background color (light gray here) */
+       color: #333;  /* Set hover text color (darker gray here) */
+      }
+
+      footer{
+        font-size: 25px;
+      }
+
+      .soap{
+        display: inline;
+        align-items: center;
+      }
+
+      .soap img {
+        margin-left: 300px;  /* Pushes image to right edge */
+      }
+
+
+      
+      </style>
      
     
     
 </head>
 <body>
-    <div class="code-block" id="code-block"
+    <div class="code-block" id="code-block">
+    <header>
+      <img src="Images/logokc.png" alt="This is the image of a logo">
+      <div class="rose" id="rose">
   <nav>
      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Pages/Product.html">Products</a></li>
-        <li><a href="Pages/Contact.html">Contact</a></li>
-        <li><a href="Pages/Login.html">Login</a></li>
-        <li><a href="Pages/Signup.html">Signup</a></li>
+        <a href="index.html" style="background-color: #000; color: #ccc;">Home</a>
+        <a href="Pages/Product.html">Products</a>
+        <a href="Pages/Contact.html">Contact</a>
+        <a href="Pages/Login.html">Login</a>
+        <a href="Pages/Signup.html">Signup</a>
     </ul>
 </nav>
+</div>
+</header>
 
    
-      <div class="container"><p>Taste the Raw Goodness Of Africa</p><button class="contain"> <a href="../Homework6/Pages/Product.html">Explore Our Products</a></button></div>
+      <div class="container"><p>Taste the Raw Goodness Of Africa</p><button class="contain"> <a href="../Homework6/Pages/Product.html" style="font-size: 17px;">Explore Our Products</a></button></div>
     
 
 <p class="raw">African food is a <b>diverse</b>, and when you are talking about food, the culturecomes in too. With over 54 countries and 3,000 ethnic groups, African food has much to offer. In this website, we will explore some fascinating facts about African foods. The food is rich in flavour and reflects the continent's varied <b><u>history</u></b>, geography, and cultural <b><u>traditions</u></b>. bottomline, you can be there as many African countries with great food. 
@@ -104,12 +153,17 @@
             <hr>
             <div>   
                 <footer>
-                    <b>Please follow us on our socials</b>👍👍
+                  <div class="soap" id="soap">
+                  <b>Please follow us on our socials</b>👍👍
                    <p><i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-twitter"></i>
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-linkedin"></i>
-                </p>
+                  </p>
+                   
+                  <img src="Images/logokc.png" alt="This is the image of a logo">
+                    </div>
+                
                 </footer>
             </div>
             </form>
