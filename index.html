@@ -86,12 +86,46 @@
        background-color: #eee;  /* Set hover background color (light gray here) */
        color: #333;  /* Set hover text color (darker gray here) */
       }
-
+       
+     
+      /* styling the footer */
       footer{
-        font-size: 25px;
+       font-size: 25px;
+       width: 100%;
+       background-color: #87CEEB;
+       padding: 20px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
       }
-
-      .soap{
+      .footer-text-logo {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 80%;
+       margin-bottom: 20px;
+      }
+                  
+      .footer-text-logo p {
+       font-size: 24px;
+       font-weight: bold;
+       margin-right: 20px;
+      }
+                  
+      .footer-logo {
+       height: 100px; /* Adjust the size of the logo as needed */
+      }
+      .social-icons {
+       display: flex;
+       justify-content: center;
+       width: 80%;
+       margin: 20px 0;
+      }
+                  
+      .social-icons a {
+       margin: 0 10px;
+      }
+      /* .soap{
         display: inline;
         align-items: center;
       }
@@ -99,9 +133,40 @@
       .soap img {
         margin-left: 1300px;  /* Pushes image to right edge */
        
+      
+      h1{
+        padding: 10px;
+        font-style: italic;
+        text-align: center;
+        text-shadow: 2PX 2PX 2PX white;
+         background-color: #87CEEB; 
       }
     
-      </style>
+      .image-gallery {
+        display: flex; /* Make the gallery a flexbox */
+        flex-wrap: wrap; /* Wrap items if they overflow */
+        margin: 10px;
+        flex-direction: row; /* Arrange items in a row (3 columns) */
+      }
+
+     .style {
+       display: flex; /* Make the container a flexbox */
+       flex-direction: column; /* Stack items vertically */
+       align-items: center; /* Center items horizontally */
+       width: 33.33%; /* Each container takes 1/3rd width */
+       margin: 5px; /* Optional margin for spacing between images */
+       width: calc(33.33% - 10px); /* Adjust width for spacing */
+      }
+
+     .style img {
+       width: 100%; /* Images take full width of container */
+       height: 100%;
+      }
+     
+      .caption{
+       text-shadow: 2PX 2PX 2PX white;
+      }
+     </style>
      
     
     
@@ -130,19 +195,46 @@
 <p class="raw">African food is a <b>diverse</b>, and when you are talking about food, the culturecomes in too. With over 54 countries and 3,000 ethnic groups, African food has much to offer. In this website, we will explore some fascinating facts about African foods. The food is rich in flavour and reflects the continent's varied <b><u>history</u></b>, geography, and cultural <b><u>traditions</u></b>. bottomline, you can be there as many African countries with great food. 
  
   <button class="fat" style="padding: 10px; border: 5px; border-radius: 10px; display: grid; margin-left: 500px; position: absolute;"><a href="Pages/Product.html">Learn more</button></a></p>
- 
+  
+  <h1>Browse Through Our African Goodies.</h1>
+  <div class="image-gallery" id="image-gallery">
+  <div class="style">
   <img src="Images/African spices.jpg" alt="This is an image of an African spices">
-    <h3>African Spices</h3>
-    
+    <h3 class="caption">African Spices</h3>
+    </div>
+    <div class="style">
     <img src="Images/African fruits.jpg" alt="This is a picture of African fruits">
-    <h3>African fruits</h3>
+    <h3 class="caption">African fruits</h3>
+    </div>
+    <div class="style">
      <img src="Images/African leafy greens.jpg" alt="This is a picture of African leafy green">
-    <h3>African Leafy Green</h3>
-
+    <h3 class="caption">African Leafy Green</h3>
+     </div>
+     <div class="style">
     <img src="Images/African Legumes.jpg" alt="This is a piture of an African Legume">
-    <h3>African Legumes</h3>
+    <h3 class="caption">African Legumes</h3>
+    </div>
+    <div class="style">
      <img src="Images/African vegetables.jpg" alt="This is a picture of African vegetables">
-    <h3>African Vegetables</h3>
+     <h3 class="caption">African Vegetables</h3>
+    </div>
+    <div class="style">
+      <img src="Images/African tubers.jpg" alt="This is an image of a potato">
+      <h3 class="caption">African Tubers</h3>
+    </div>
+    <div class="style">
+     <img src="Images/African barley.jpg" alt="This is a picture of African barley">
+     <h3 class="caption">African Barley</h3>
+    </div>
+    <div class="style">
+     <img src="Images/African maize.jpg" alt="This ia an image of African maize">
+     <h3 class="caption">African Miaze</h3>
+    </div>
+    <div class="style">
+     <img src="Images/African Wheat.jpg" alt="This is an image of African Wheat">
+     <h3 class="caption">African Wheat</h3>
+  </div>
+</div>
     <h2>Newsletter</h2>
             <form action="">
                 <div>
@@ -153,19 +245,21 @@
             <div>   
                 <footer>
                   <div class="soap" id="soap">
+                    <div class="footer-text-logo">
                   <b>Please follow us on our socials</b>👍👍
-                  
+                  <img src="Images/logokc.png" alt="This is the image of a logo" class="footer-logo">
+                </div>
+                <div class="social-icons">
                    <p><a href="https://web.facebook.com/?_rdc=1&_rdr" style="color: #000;"><i class="fa-brands fa-facebook"></i> </a> 
                      <a href="https://x.com/?lang=en" style="color: #000;"><i class="fa-brands fa-twitter"></i></a>
                     <a href="https://www.instagram.com/" style="color: #000;"><i class="fa-brands fa-instagram"></i></a> 
                     <a href="https://www.linkedin.com/login" style="color: #000;"><i class="fa-brands fa-linkedin"></i></a>
                   </p>
-                
-                  <img src="Images/logokc.png" alt="This is the image of a logo">
+                </div>
+                 
                 
                     </div>
-                
-                </footer>
+                    
             </div>
             </form>
 
