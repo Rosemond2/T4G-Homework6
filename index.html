@@ -34,6 +34,7 @@
           margin-left: 600px;
         }
        
+        /* styling navigation */
         .contain{
           margin-top: 50px;
           border-radius: 10px;
@@ -88,58 +89,57 @@
       }
        
      
-      /* styling the footer */
-      footer{
-       font-size: 25px;
-       width: 100%;
-       background-color: #87CEEB;
-       padding: 20px;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-      }
-      .footer-text-logo {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       width: 80%;
-       margin-bottom: 20px;
-      }
-                  
-      .footer-text-logo p {
-       font-size: 24px;
-       font-weight: bold;
-       margin-right: 20px;
-      }
-                  
-      .footer-logo {
-       height: 100px; /* Adjust the size of the logo as needed */
-      }
-      .social-icons {
-       display: flex;
-       justify-content: center;
-       width: 80%;
-       margin: 20px 0;
-      }
-                  
-      .social-icons a {
-       margin: 0 10px;
-      }
-      /* .soap{
-        display: inline;
-        align-items: center;
-      }
+      /* styling the footer section */
+      footer {
+    background-color: rgb(87, 40, 214);
+    color: #fff;
+    padding: 20px 20px;
+    width: 100%;
+}
 
-      .soap img {
-        margin-left: 1300px;  /* Pushes image to right edge */
-       
-      
+.soap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-text-icons {
+    display: flex;
+    flex-direction: column;
+    text-shadow: 2px 2px 2px black;
+}
+
+.footer-text-icons b {
+    margin-bottom: 5px;
+}
+
+.footer-logo img {
+    max-height: 100px; /* Adjust the height of the logo as needed */
+}
+
+.social-icons a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-icons i {
+    font-size: 20px;
+}
+ /* styling images and elements in my body */
       h1{
         padding: 10px;
         font-style: italic;
         text-align: center;
         text-shadow: 2PX 2PX 2PX white;
-         background-color: #87CEEB; 
+         background-color: #58899b; 
       }
     
       .image-gallery {
@@ -166,6 +166,64 @@
       .caption{
        text-shadow: 2PX 2PX 2PX white;
       }
+
+      /* styling the newsletter */
+   .newsletter {
+    background-color: #836eee; /* Adjust background color to match the image */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+.newsletter-text {
+    max-width: 60%;
+}
+
+.newsletter-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align the form and text to the right */
+}
+
+.newsletter-form-container p {
+    margin-right: 100px; /* Add some space below the "Sign up here" text */
+    text-shadow: 2px 2px 2px black;
+}
+
+.newsletter-form {
+    background-color: #D3D3D3; /* Adjust background color of the form */
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-form label {
+    margin-right: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.newsletter-form button {
+    background-color: #e8e6f1; /* Match button color to the newsletter background */
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: #333;
+}
      </style>
      
     
@@ -235,33 +293,45 @@
      <h3 class="caption">African Wheat</h3>
   </div>
 </div>
-    <h2>Newsletter</h2>
-            <form action="">
-                <div>
-                <label for="">Email</label>
-                <input type="email" name="" id="">
-            </div>
-            <hr>
-            <div>   
-                <footer>
-                  <div class="soap" id="soap">
-                    <div class="footer-text-logo">
-                  <b>Please follow us on our socials</b>👍👍
-                  <img src="Images/logokc.png" alt="This is the image of a logo" class="footer-logo">
-                </div>
-                <div class="social-icons">
-                   <p><a href="https://web.facebook.com/?_rdc=1&_rdr" style="color: #000;"><i class="fa-brands fa-facebook"></i> </a> 
-                     <a href="https://x.com/?lang=en" style="color: #000;"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/" style="color: #000;"><i class="fa-brands fa-instagram"></i></a> 
-                    <a href="https://www.linkedin.com/login" style="color: #000;"><i class="fa-brands fa-linkedin"></i></a>
-                  </p>
-                </div>
-                 
-                
-                    </div>
-                    
-            </div>
-            </form>
 
-          </body>
+<div class="newsletter">
+  <div class="newsletter-text">
+      <h2>NEWSLETTER</h2>
+      <p>Would you like to receive monthly information about our products and services?</p>
+  </div>
+  <div class="newsletter-form-container">
+      <p>Sign up here</p>
+      <i class="fa-solid fa-arrow-down" style="margin-right: 150px; color: black;"></i>
+      <form class="newsletter-form" action="">
+          <label for="email" style="color: black;">Email:</label>
+          <input type="email" name="email" id="email" required>
+          <button type="submit"><a href="Pages/Signup.html" style="text-decoration: none; color: #000; font-size: 20px;">Sign up </a></button>
+      </form>
+  </div>
+</div>
+
+
+ <hr>
+            <div>
+              <footer>
+                <div class="soap" id="soap">
+                <div class="footer-content">
+                  <div class="footer-text-icons">
+                  <b>Please follow us on our socials</b> 👍👍
+                <div class="social-icons">
+              <a href="https://web.facebook.com/?_rdc=1&_rdr" style="color: #000;"><i class="fa-brands fa-facebook"></i></a> 
+              <a href="https://x.com/?lang=en" style="color: #000;"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.instagram.com/" style="color: #000;"><i class="fa-brands fa-instagram"></i></a> 
+              <a href="https://www.linkedin.com/login" style="color: #000;"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+             </div>
+           <div class="footer-logo">
+        <img src="Images/logokc.png" alt="This is the image of a logo">
+      </div>
+      </div>
+      </div>
+    </footer>   
+    </form>
+
+  </body>
 </html>
