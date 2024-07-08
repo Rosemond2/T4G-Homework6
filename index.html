@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title><script src="https://kit.fontawesome.com/acaf0f8a1e.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="src/style.css">
     <style>
         body {
           background-image: url("Images/African\ map.jpg");
@@ -176,6 +176,8 @@
     align-items: center;
     padding: 20px;
     border-radius: 5px; /* Optional: for rounded corners */
+    border: 10%;
+    border-color: rgb(250, 55, 6);
 }
 
 .newsletter-text {
@@ -224,6 +226,30 @@
 .newsletter-form button:hover {
     background-color: #333;
 }
+    
+#hide{
+  display: none;
+}
+.more-images{
+  margin-left: 40%;
+  font-size: 25px;
+  border: 10px;
+  border-radius: 10px;
+}
+   .more-images:hover{
+    background-color: purple;
+    color: white;
+   }
+    #close{
+     margin-left: 40%;
+     font-size: 25px;
+     border: 10px;
+     border-radius: 10px;
+    }
+     #close:hover{
+      background-color: aqua;
+      color: black;
+     }
      </style>
      
     
@@ -247,51 +273,95 @@
 </header>
 
    
-      <div class="container"><p>Taste the Raw Goodness Of Africa</p><button class="contain"> <a href="../Homework6/Pages/Product.html" style="font-size: 17px;">Explore Our Products</a></button></div>
+      <div class="container"><p>Taste the Raw Goodness Of Africa</p><button class="contain" id="contain"> <a href="../Homework6/Pages/Product.html" style="font-size: 17px;">Explore Our Products</a></button></div>
     
 
-<p class="raw">African food is a <b>diverse</b>, and when you are talking about food, the culturecomes in too. With over 54 countries and 3,000 ethnic groups, African food has much to offer. In this website, we will explore some fascinating facts about African foods. The food is rich in flavour and reflects the continent's varied <b><u>history</u></b>, geography, and cultural <b><u>traditions</u></b>. bottomline, you can be there as many African countries with great food. 
+<p class="raw">African food is <b>diverse</b>, and when you are talking about food, the culture comes in too. With over 54 countries and 3,000 ethnic groups, African food has much to offer. In this website, we will explore some fascinating facts about African foods. The food is rich in flavour and reflects the continent's varied <b><u>history</u></b>, geography, and cultural <b><u>traditions</u></b>. bottomline, you can be there as many African countries with great food. 
  
   <button class="fat" style="padding: 10px; border: 5px; border-radius: 10px; display: grid; margin-left: 500px; position: absolute;"><a href="Pages/Product.html">Learn more</button></a></p>
   
   <h1>Browse Through Our African Goodies.</h1>
+
   <div class="image-gallery" id="image-gallery">
   <div class="style">
-  <img src="Images/African spices.jpg" alt="This is an image of an African spices">
+  <img src="Images/African spices.jpg" alt="This is an image of an African spices" id="spices">
     <h3 class="caption">African Spices</h3>
     </div>
     <div class="style">
-    <img src="Images/African fruits.jpg" alt="This is a picture of African fruits">
+    <img src="Images/African fruits.jpg" alt="This is a picture of African fruits" id="fruits">
     <h3 class="caption">African fruits</h3>
     </div>
     <div class="style">
-     <img src="Images/African leafy greens.jpg" alt="This is a picture of African leafy green">
+     <img src="Images/African leafy greens.jpg" alt="This is a picture of African leafy green" id="greens">
     <h3 class="caption">African Leafy Green</h3>
      </div>
      <div class="style">
-    <img src="Images/African Legumes.jpg" alt="This is a piture of an African Legume">
+    <img src="Images/African Legumes.jpg" alt="This is a piture of an African Legume" id="legume">
     <h3 class="caption">African Legumes</h3>
     </div>
     <div class="style">
-     <img src="Images/African vegetables.jpg" alt="This is a picture of African vegetables">
+     <img src="Images/African vegetables.jpg" alt="This is a picture of African vegetables" id="vegetable">
      <h3 class="caption">African Vegetables</h3>
     </div>
     <div class="style">
-      <img src="Images/African tubers.jpg" alt="This is an image of a potato">
+      <img src="Images/African tubers.jpg" alt="This is an image of a potato" id="potato">
       <h3 class="caption">African Tubers</h3>
     </div>
     <div class="style">
-     <img src="Images/African barley.jpg" alt="This is a picture of African barley">
+     <img src="Images/African barley.jpg" alt="This is a picture of African barley" id="barley">
      <h3 class="caption">African Barley</h3>
     </div>
     <div class="style">
-     <img src="Images/African maize.jpg" alt="This ia an image of African maize">
+     <img src="Images/African maize.jpg" alt="This ia an image of African maize" id="maize">
      <h3 class="caption">African Miaze</h3>
     </div>
     <div class="style">
-     <img src="Images/African Wheat.jpg" alt="This is an image of African Wheat">
+     <img src="Images/African Wheat.jpg" alt="This is an image of African Wheat" id="Wheat">
      <h3 class="caption">African Wheat</h3>
   </div>
+</div>
+<button class="more-images" id="more-images">Click to load more images</button>
+
+<!-- another set of Images -->
+<div class="image-gallery" id="hide">
+  <div class="style">
+  <img src="Images/African spices.jpg" alt="This is an image of an African spices" id="spices">
+    <h3 class="caption">African Spices</h3>
+    </div>
+    <div class="style">
+    <img src="Images/African fruits.jpg" alt="This is a picture of African fruits" id="fruits">
+    <h3 class="caption">African fruits</h3>
+    </div>
+    <div class="style">
+     <img src="Images/African leafy greens.jpg" alt="This is a picture of African leafy green" id="greens">
+    <h3 class="caption">African Leafy Green</h3>
+     </div>
+     <div class="style">
+    <img src="Images/African Legumes.jpg" alt="This is a piture of an African Legume" id="legume">
+    <h3 class="caption">African Legumes</h3>
+    </div>
+    <div class="style">
+     <img src="Images/African vegetables.jpg" alt="This is a picture of African vegetables" id="vegetable">
+     <h3 class="caption">African Vegetables</h3>
+    </div>
+    <div class="style">
+      <img src="Images/African tubers.jpg" alt="This is an image of a potato" id="potato">
+      <h3 class="caption">African Tubers</h3>
+    </div>
+    <div class="style">
+     <img src="Images/African barley.jpg" alt="This is a picture of African barley" id="barley">
+     <h3 class="caption">African Barley</h3>
+    </div>
+    <div class="style">
+     <img src="Images/African maize.jpg" alt="This ia an image of African maize" id="maize">
+     <h3 class="caption">African Miaze</h3>
+    </div>
+    <div class="style">
+     <img src="Images/African Wheat.jpg" alt="This is an image of African Wheat" id="Wheat">
+     <h3 class="caption">African Wheat</h3>
+  </div>
+  <button class="close" id="close">Click to close</button>
+
 </div>
 
 <div class="newsletter">
@@ -332,6 +402,6 @@
       </div>
     </footer>   
     </form>
-
+    <script src="src/index.js"></script>
   </body>
 </html>

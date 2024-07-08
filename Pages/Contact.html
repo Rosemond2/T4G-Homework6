@@ -55,18 +55,52 @@
        color: #333;  /* Set hover text color (darker gray here) */
       }
       
-      footer{
-        font-size: 25px;
-      }
+           /* styling footer */
+     footer {
+    background-color: rgb(87, 40, 214);
+    color: #fff;
+    padding: 20px 20px;
+    width: 100%;
+}
 
-      .soap{
-        display: inline;
-        align-items: center;
-      }
+.soap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-      .soap img {
-        margin-left: 1300px;  /* Pushes image to right edge */
-      }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-text-icons {
+    display: flex;
+    flex-direction: column;
+    text-shadow: 2px 2px 2px black;
+}
+
+.footer-text-icons b {
+    margin-bottom: 5px;
+}
+
+.footer-logo img {
+    max-height: 100px; /* Adjust the height of the logo as needed */
+}
+
+.social-icons a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-icons i {
+    font-size: 20px;
+}
+
+
       </style>
     
 </head>
@@ -103,19 +137,27 @@
       
     </form>
       <hr>
-    <div>   
-        <footer>
-          <div class="soap" id="soap">
-            <b>Please follow us on our socials</b>👍👍
-            <p><a href="https://web.facebook.com/?_rdc=1&_rdr" style="color: #000;"><i class="fa-brands fa-facebook"></i> </a> 
-              <a href="https://x.com/?lang=en" style="color: #000;"><i class="fa-brands fa-twitter"></i></a>
-             <a href="https://www.instagram.com/" style="color: #000;"><i class="fa-brands fa-instagram"></i></a> 
-             <a href="https://www.linkedin.com/login" style="color: #000;"><i class="fa-brands fa-linkedin"></i></a>
-           </p>
-           
-        <img src="../Images/logokc.png" alt="This is the image of a logo">
-      </div>
-        </footer>
+    <div>
+      
+      <footer>
+        <div class="soap" id="soap">
+        <div class="footer-content">
+          <div class="footer-text-icons">
+          <b>Please follow us on our socials</b> 👍👍
+        <div class="social-icons">
+      <a href="https://web.facebook.com/?_rdc=1&_rdr" style="color: #000;"><i class="fa-brands fa-facebook"></i></a> 
+      <a href="https://x.com/?lang=en" style="color: #000;"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.instagram.com/" style="color: #000;"><i class="fa-brands fa-instagram"></i></a> 
+      <a href="https://www.linkedin.com/login" style="color: #000;"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+     </div>
+   <div class="footer-logo">
+<img src="../Images/logokc.png" alt="This is the image of a logo">
+</div>
+</div>
+</div>
+</footer>   
+
     </div>
   </div>
 
