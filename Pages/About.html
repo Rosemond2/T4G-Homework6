@@ -1,41 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aboutpage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AboutUspage</title><script src="https://kit.fontawesome.com/acaf0f8a1e.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-image: url("../Images/views.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      font-size: 30px;
+    }
+    .code-block {
+     background-color: rgba(190, 190, 241, 0.5); /* Light gray background */
+     color: black; /* Dark text color */
+     padding: 10px;  /* Add some padding for readability */
+    }
+   
+    /* styling navigation */
+    .contain{
+      margin-top: 50px;
+      border-radius: 10px;
+      
+    }
+
+    .contain a{
+      text-decoration: none;
+    }
+   
+   .rose {
+     float: right; /* Floats elements to the left */
+     list-style: none; /* Removes default bullet points */
+     margin-left: 300px; /* Adds spacing between links */
+     justify-content: flex-end;
+     margin-bottom: 80px;
+
+   }
+  
+  header {
+    display: flex;
+    align-items: center;  /* Vertically aligns logo and navigation */
+  }
+
+  header a {
+   margin-right: 20px;  /* Adds space between navigation items */
+   text-decoration: none;  /* Removes underline */
+   color: #000;  /* Set default color (replace with your preference) */
+   display: inline-block;
+   padding: 10px 15px;  /* Adjust padding for desired box size */
+   border: 2px solid #ccc;  /* Set border color (gray here) */
+   margin-right: 10px;  /* Add spacing between links */
+  }
+ 
+  header a:hover {
+   background-color: #eee;  /* Set hover background color (light gray here) */
+   color: #333;  /* Set hover text color (darker gray here) */
+  }
+   
+ 
+  /* styling the footer section */
+  footer {
+background-color: rgb(87, 40, 214);
+color: #fff;
+padding: 20px 20px;
+width: 100%;
+}
+
+.soap {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+
+.footer-text-icons {
+display: flex;
+flex-direction: column;
+text-shadow: 2px 2px 2px black;
+}
+
+.footer-text-icons b {
+margin-bottom: 5px;
+}
+
+.footer-logo img {
+max-height: 100px; /* Adjust the height of the logo as needed */
+}
+
+.social-icons a {
+margin: 0 5px;
+text-decoration: none;
+color: #fff;
+}
+
+.social-icons i {
+font-size: 20px;
+}
+ </style>
 </head>
 <body>
-    <nav>
-    <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="Pages/Product.html">Products</a></li>
-        <li><a href="Pages/Contact.html">Contact</a></li>
-        <li><a href="Pages/Login.html">Login</a></li>
-        <li><a href="../Pages/Signup.html">Signup</a></li>
+  <div class="code-block" id="code-block">
+    <header>
+      <img src="../Images/logokc.png" alt="This is the image of a logo">
+      <div class="rose" id="rose">
+  <nav>
+     <ul>
+        <a href="../index.html">Home</a>
+        <a href="../Pages/Product.html">Products</a>
+        <a href="Pages/About.html" style="background-color: #000; color: #ccc;">About Us</a>
+        <a href="../Pages/Contact.html">Contact</a>
+        <a href="../Pages/Login.html">Login<i class="fa-solid fa-right-to-bracket"></i></a>
+        <a href="../Pages/Signup.html">Signup</a>
     </ul>
 </nav>
+</div>
+</header>
+ <h1>Hello there, Welcome</h1>
+
+ <hr>
+            <div>
+              <footer>
+                <div class="soap" id="soap">
+                <div class="footer-content">
+                  <div class="footer-text-icons">
+                  <b>Please follow us on our socials</b> 👍👍
+                <div class="social-icons">
+              <a href="https://web.facebook.com/?_rdc=1&_rdr" style="color: #000;"><i class="fa-brands fa-facebook"></i></a> 
+              <a href="https://x.com/?lang=en" style="color: #000;"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.instagram.com/" style="color: #000;"><i class="fa-brands fa-instagram"></i></a> 
+              <a href="https://www.linkedin.com/login" style="color: #000;"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+             </div>
+           <div class="footer-logo">
+        <img src="../Images/logokc.png" alt="This is the image of a logo">
+      </div>
+      </div>
+      </div>
+    </footer>   
+    </form>
+    <script src="src/index.js"></script>
 </body>
 </html>
-
-<form action="/submit_form" method="post" id="myForm">
-    <label for="name">Your name:</label>
-    <input type="text" id="name" name="name" placeholder="Your Full Name" required><br>
-   <label for="email">Email:</label>
-    <input type="email" name="email" id="email" placeholder="Email" required><br>
-    <label for="message"></label>
-    <textarea name="message" id="message" rows="4" cols="50" placeholder="Enter text here"></textarea><br>
-    <input type="submit" value="submit" onclick="submitAndReload()">
-
-
-    <script>
-        function submitAndReload() {
-          // Submit the form programmatically (optional)
-          // document.getElementById('myForm').submit();
-    
-          // Reload the page after a brief delay (optional)
-          setTimeout(function() {
-            location.reload();
-          }, 1000); // Reload after 1 second (you can adjust the delay)
-        }
-      </script>

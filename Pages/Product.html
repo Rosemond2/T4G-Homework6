@@ -41,7 +41,7 @@
         .rose {
          float: right; /* Floats elements to the left */
          list-style: none; /* Removes default bullet points */
-         margin-left: 500px; /* Adds spacing between links */
+         margin-left: 300px; /* Adds spacing between links */
          justify-content: flex-end;
          margin-bottom: 80px;
 
@@ -113,6 +113,81 @@
     font-size: 20px;
 }
 
+
+/* styling my images to layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: wheat;
+    box-sizing: border-box;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.item h2,h3,h4,h5 {
+    background-color: #3399ff;
+    color: white;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 5px;
+    width: auto;
+    text-align: center;
+}
+
+.item p {
+    text-align: left;
+    margin: 10px 0;
+    flex-grow: 1;
+    display: block;  /* Prevent margin collapsing */
+}
+
+.food{
+  margin-top: auto;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+}
+
+.food:hover {
+    background-color: #333;
+}
+
+.image-container {
+    width: 100%;
+    height: 500px; /* Set a fixed height for the images */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
  </style>
 </head>
 <body>
@@ -124,6 +199,7 @@
         <ul>
             <a href="../index.html">Home</a></li>
             <a href="Pages/Product.html" style="background-color: #000; color: #ccc;">Products</a>
+            <a href="Pages/About.html">About Us</a>
             <a href="../Pages/Contact.html">Contact</a>
             <a href="../Pages/Login.html">Login <i class="fa-solid fa-right-to-bracket"></i></a>
             <a href="../Pages/Signup.html">Signup</a>
@@ -135,35 +211,75 @@
     <div class="run" id="run">
     <h1>Our Raw Food Products</h1>
   </div>
-    <img src="../Images/yam.jpg" alt="This is a picture of a yam">
+    
+  <div class="container">
+    <div class="item">
+      <div class="image-container">
+  <img src="../Images/yam.jpg" alt="This is a picture of a yam">
+      </div>
     <h2>African Yam</h2>
-
-    <a href="https://en.wikipedia.org/wiki/Yam_(vegetable)" style="font-size: 40px; color: black;">Yams</a> are native to warmer regions of both hemispheres, and several spices arde cultivated as <b>staple food crops in the tropics.</b> In certain tropics cultures, notably in the <i>West African and New Guinea,</i> the yam is the primary agricultural commodity and the focal point of elaborate rituals. Yams are consumed as cooked starchy vegetables.
+    <a href="https://en.wikipedia.org/wiki/Yam_(vegetable)" style="font-size: 40px; color: black; text-decoration: none;">Yams</a> are native to warmer regions of both hemispheres, and several spices arde cultivated as <b>staple food crops in the tropics.</b> In certain tropics cultures, notably in the <i>West African and New Guinea,</i> the yam is the primary agricultural commodity and the focal point of elaborate rituals. Yams are consumed as cooked starchy vegetables.
      <div class="food" id="food">
     <p><button><a href="../Pages/Contact.html" style="color: white; text-decoration: none;">Learn more</a></button></p>
     </div>
-   
-     <img src="../Images/banana.jpg" alt="This is an image of a banana">
+  </div>
+      
+  <div class="item">
+    <div class="image-container">
+  <img src="../Images/banana.jpg" alt="This is an image of a banana">
+    </div>
      <h3>African Plantain</h3>
-     <a href="https://simple.wikipedia.org/wiki/Plantain" style="font-size: 40px; color: black;">Plantain</a> major groups of banana varieties (Genus Musa) that are staple foods in many tropical areas. The edible fruit of plantain bananas has more starch than the common dessert bananas and is not eaten raw. Beacause, plantains have the most starch before they ripen, they are usually cooked green, <b> boiled or fried, in savory dishes</b>. The ripe fruit s are mainly sweet and are often cooked with coconut juice or sugar as a flavouring. Plantians may also be <i>dried</i> for later use in cooking or <i>ground</i> for use as meal, which can be further refined to a flour.
+     <a href="https://s
+     imple.wikipedia.org/wiki/Plantain" style="font-size: 40px; color: black; text-decoration: none;">Plantain</a> major groups of banana varieties (Genus Musa) that are staple foods in many tropical areas. The edible fruit of plantain bananas has more starch than the common dessert bananas and is not eaten raw. Beacause, plantains have the most starch before they ripen, they are usually cooked green, <b> boiled or fried, in savory dishes</b>. The ripe fruit s are mainly sweet and are often cooked with coconut juice or sugar as a flavouring. Plantians may also be <i>dried</i> for later use in cooking or <i>ground</i> for use as meal, which can be further refined to a flour.
      <div class="food">
      <p><button><a href="../Pages/Contact.html" style="color: white; text-decoration: none;">Learn more</a></button></p>
     </div>
-
+  </div> 
+ 
+  <div class="item">
+    <div class="image-container">
     <img src="../Images/garden eggs.jpg" alt="This is a picture a garden egg">
+    </div>
     <h4>African Garden Eggs</h4>
-    <a href="https://en.wikipedia.org/wiki/Solanum_aethiopicum" style="font-size: 40px; color: black;">African garden eggs</a> are a type of eggplant used as a food crop in several countries across Africa. These small, white friuts have a teardrop or roundish shape and are valued for bitterness. Garden egg is indigenous to <b><i>sub-Sahara Africa</i></b>and can be stored for up to three months by allowing it to dry, which is particularly useful in tropical regions where refrigerators may be limited. In Ghana, garden egg is one of the <b><i>three most consumed vegetables,</i></b> alongside tomatoes and peppers. It is used in stews and can also be eaten raw. Interestingly, the stems and the leaves of garden eggs are consumed in some part of Arican countries, although not in Ghana. Due to its spongy texture, garden egg is sometimes used as a less expensive meat subtitute, as it absorbs other flavours well.
+    <a href="https://en.wikipedia.org/wiki/Solanum_aethiopicum" style="font-size: 40px; color: black; text-decoration: none;">African garden eggs</a> are a type of eggplant used as a food crop in several countries across Africa. These small, white friuts have a teardrop or roundish shape and are valued for bitterness. Garden egg is indigenous to <b><i>sub-Sahara Africa</i></b>and can be stored for up to three months by allowing it to dry, which is particularly useful in tropical regions where refrigerators may be limited. In Ghana, garden egg is one of the <b><i>three most consumed vegetables,</i></b> alongside tomatoes and peppers. It is used in stews and can also be eaten raw. Interestingly, the stems and the leaves of garden eggs are consumed in some part of Arican countries, although not in Ghana. Due to its spongy texture, garden egg is sometimes used as a less expensive meat subtitute, as it absorbs other flavours well.
     <div class="food">
     <p><button><a href="../Pages/Contact.html" style="color: white; text-decoration: none;">learn More</a></button></p>
     </div>
-    
+  </div>
+ 
+  <div class="item">
+    <div class="image-container">
     <img src="../Images/okro.jpg" alt="This a picture of an okro">
+    </div>
     <h5>Okro</h5>
-    <a href="https://en.wikipedia.org/wiki/Okra" style="font-size: 40px; color: black;">Okro</a> also known as okra, gumbo, or lady's fingers, is a versatile vegetable found around the world. It is often used for making soups, stews and sauce. In Nigeri, it is a key ingredient in popular dishes like <b>okra soup</b> and <b>ogbono-okra mixed soup.</b> Okra is a flowering plant with edible seed pods, and it is cultivated in warm and tropicalclimates, including Africa and South Asia.
+    <a href="https://en.wikipedia.org/wiki/Okra" style="font-size: 40px; color: black; text-decoration: none;">Okro</a> also known as okra, gumbo, or lady's fingers, is a versatile vegetable found around the world. It is often used for making soups, stews and sauce. In Nigeri, it is a key ingredient in popular dishes like <b>okra soup</b> and <b>ogbono-okra mixed soup.</b> Okra is a flowering plant with edible seed pods, and it is cultivated in warm and tropicalclimates, including Africa and South Asia.
     <div class="food">
     <p><button><a href="../Pages/Contact.html" style="color: white; text-decoration: none;">Learn More</a></button></p>
     </div>
+  </div>
 
+  <div class="item">
+    <div class="image-container">
+  <img src="../Images/African cocoa.jpg" alt="This is a picture of African cocoa">
+    </div>
+  <h4>African Cocoa</h4>
+  <a href="https://en.wikipedia.org/wiki/Cocoa_production_in_Ivory_Coast" style="font-size: 40px; color: black; text-decoration: none;"> African cocoa</a> is renowned <b><i>worldwide</i></b> for its quality and flavor, playing a pivotal role in the global chocolate industry. Originating from the seeds of the <i>Theobroma cacao tree</i>, cocoa has a rich history and significant economic importance in Africa, particularly in countries like <i>Côte d'Ivoire, <b>Ghana</b>, Nigeria, and Cameroon</i>. Cocoa was first introduced to Africa in the mid-19th century by European colonists. Today, Africa is the <u>largest producer of cocoa beans</u>, accounting for over 70% of the world's supply. The favorable tropical climate, with its consistent rainfall and warm temperatures, provides the ideal conditions for cocoa cultivation. Cocoa trees thrive in the humid, forested regions of West Africa, where smallholder farmers manage the majority of the production.
+  <div class="food">
+  <p><button><a href="../Pages/Contact.html" style="color: white; text-decoration: none;">Learn More</a></button></p>
+  </div>
+ </div>
+
+ <div class="item">
+  <div class="image-container">
+  <img src="../Images/African Shea.jpg" alt="This is a picture of an African Shea">
+  </div>
+  <h4>African Shea</h4>
+  <a href="https://www.africanheritagecollection.com/products/african-unrefined-raw-shea-butter-1lb-ivory" style="font-size: 30px; color: black; text-decoration: none; display: inline-block;">African Shea</a> butter, derived from the nuts of the <b>Vitellaria paradoxa tree</b>, is a valuable natural resource widely celebrated for its rich moisturizing properties and extensive uses in <i>cosmetics, skincare, and <b>food</b></i>. Found predominantly in the savanna regions of West and Central Africa, shea butter has been a staple in African communities for centuries. The use of shea butter dates back thousands of years in Africa, where it has been an essential part of traditional medicine, cooking, and skincare. Ancient Egyptians reportedly used shea butter in their beauty regimens and <u> <b>to protect their skin from the harsh desert climate</b></u>. In many African cultures, shea butter is applied to the skin of newborns and used as a healing balm for various skin conditions and wounds.
+  <div class="food">
+  <p><button><a href="../Pages/Contact.html" style="color: white; text-decoration: none;">Learn More</a></button></p>
+  </div>
+ </div> 
+</div>
 
     <hr>
             <div>   

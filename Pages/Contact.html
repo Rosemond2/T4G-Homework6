@@ -29,7 +29,7 @@
         .rose {
          float: right; /* Floats elements to the left */
          list-style: none; /* Removes default bullet points */
-         margin-left: 500px; /* Adds spacing between links */
+         margin-left: 300px; /* Adds spacing between links */
          justify-content: flex-end;
          margin-bottom: 80px;
 
@@ -100,6 +100,18 @@
     font-size: 20px;
 }
 
+/* styling the body, added an image to it */
+.image-and-form {
+  display: grid;
+  grid-template-columns: 200px 1fr;  /* Define columns: image, form */
+  align-items: center;  /* Align content vertically */
+}
+
+.image-and-form img {
+  width: 100%;  /* Fill image container width */
+  height: auto;  /* Maintain aspect ratio */
+}
+
 
       </style>
     
@@ -113,6 +125,7 @@
         <ul>
             <a href="../index.html">Home</a>
             <a href="../Pages/Product.html">Products</a>
+            <a href="Pages/About.html">About Us</a>
             <a href="Pages/Contact.html"  style="background-color: #000; color: #ccc;">Contact</a>
             <a href="../Pages/Login.html">Login <i class="fa-solid fa-right-to-bracket"></i></a>
             <a href="../Pages/Signup.html">Signup</a>
@@ -120,6 +133,12 @@
     </nav>
     </div>
     </header>
+
+    <div class="image-and-form">
+      <img src="../Images/views.jpg" alt="Arican views">
+      
+    </div>
+    
 
     <h1>This is the Contact Us Page</h1>
     <p>I don't have a lot going on here for now, but <a href="../Pages/Login.html"><button><u>click to Login</u></button></a></p>
