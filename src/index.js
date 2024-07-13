@@ -7,6 +7,7 @@ function promptName(){//prompting the explore our product button
     pchange.innerHTML= `👋 Welcome ${name} to taste the raw goodness of Africa😘`;
     let hone=document.querySelector("h1");
     hone.innerHTML=`Hi ${name}, Browse Through Our African Goodies`;
+
 }
 
 
@@ -31,6 +32,7 @@ function alertGreensLink(){//alerting external link to African greens
 let green = document.querySelector("#greens");
 green.addEventListener("click", alertGreensLink);
 
+
 //when the user clicks on the click to load more button, the first set of images appear
 function loadMore(){//load more images
     let hide=document.getElementById("hide");
@@ -53,3 +55,5 @@ function vanish(){//closes 9 other images
 }
 let closeImages = document.getElementById("close");
 closeImages.addEventListener("click", vanish);
+
+

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AboutUspage</title><script src="https://kit.fontawesome.com/acaf0f8a1e.js" crossorigin="anonymous"></script>
+  <title>About Us Page</title>
+  <script src="https://kit.fontawesome.com/acaf0f8a1e.js" crossorigin="anonymous"></script>
   <style>
     body {
       background-image: url("../Images/views.jpg");
@@ -12,139 +13,405 @@
       background-size: cover;
       font-size: 30px;
     }
+
     .code-block {
-     background-color: rgba(190, 190, 241, 0.5); /* Light gray background */
-     color: black; /* Dark text color */
-     padding: 10px;  /* Add some padding for readability */
+      background-color: rgba(190, 190, 241, 0.5); /* Light gray background */
+      color: black; /* Dark text color */
+      padding: 10px;  /* Add some padding for readability */
     }
-   
+
     /* styling navigation */
-    .contain{
+    .contain {
       margin-top: 50px;
       border-radius: 10px;
-      
     }
 
-    .contain a{
+    .contain a {
       text-decoration: none;
     }
-   
-   .rose {
-     float: right; /* Floats elements to the left */
-     list-style: none; /* Removes default bullet points */
-     margin-left: 300px; /* Adds spacing between links */
-     justify-content: flex-end;
-     margin-bottom: 80px;
 
-   }
-  
-  header {
-    display: flex;
-    align-items: center;  /* Vertically aligns logo and navigation */
-  }
+    .rose {
+      float: right; /* Floats elements to the left */
+      list-style: none; /* Removes default bullet points */
+      margin-left: 300px; /* Adds spacing between links */
+      justify-content: flex-end;
+      margin-bottom: 80px;
+    }
 
-  header a {
-   margin-right: 20px;  /* Adds space between navigation items */
-   text-decoration: none;  /* Removes underline */
-   color: #000;  /* Set default color (replace with your preference) */
-   display: inline-block;
-   padding: 10px 15px;  /* Adjust padding for desired box size */
-   border: 2px solid #ccc;  /* Set border color (gray here) */
-   margin-right: 10px;  /* Add spacing between links */
-  }
+    header {
+      display: flex;
+      align-items: center;  /* Vertically aligns logo and navigation */
+    }
+
+    header a {
+      margin-right: 20px;  /* Adds space between navigation items */
+      text-decoration: none;  /* Removes underline */
+      color: #000;  /* Set default color (replace with your preference) */
+      display: inline-block;
+      padding: 10px 15px;  /* Adjust padding for desired box size */
+      border: 2px solid #ccc;  /* Set border color (gray here) */
+      margin-right: 10px;  /* Add spacing between links */
+    }
+
+    header a:hover {
+      background-color: #eee;  /* Set hover background color (light gray here) */
+      color: #333;  /* Set hover text color (darker gray here) */
+    }
+
+    /* styling the footer section */
+    footer {
+      background-color: rgb(87, 40, 214);
+      color: #fff;
+      padding: 20px 20px;
+      width: 100%;
+    }
+
+    .soap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .footer-text-icons {
+      display: flex;
+      flex-direction: column;
+      text-shadow: 2px 2px 2px black;
+    }
+
+    .footer-text-icons b {
+      margin-bottom: 5px;
+    }
+
+    .footer-logo img {
+      max-height: 100px; /* Adjust the height of the logo as needed */
+    }
+
+    .social-icons a {
+      margin: 0 5px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .social-icons i {
+      font-size: 20px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 10px;
+      background-color: palevioletred;
+    }
+
+    .text {
+      flex: 1;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .image {
+      flex: 1;
+      padding: 20px;
+      text-align: right;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .motive {
+      background-color: antiquewhite;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    /* Slideshow styling */
+    .slideshow-container {
+      max-width: 1500px;
+      margin: auto;
+      overflow: hidden;
+      background-color: #ccc;
+      padding: 20PX;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      margin: 0 -10px;
+    }
+
+    .slide {
+      flex: 0 0 33.33%; /* Each slide takes up 1/3 of the container */
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+      background-color: #f0f0f0; /* Default background color */
+    }
  
-  header a:hover {
-   background-color: #eee;  /* Set hover background color (light gray here) */
-   color: #333;  /* Set hover text color (darker gray here) */
-  }
-   
- 
-  /* styling the footer section */
-  footer {
-background-color: rgb(87, 40, 214);
-color: #fff;
-padding: 20px 20px;
-width: 100%;
-}
+    .slide:nth-child(odd) {
+      background-color: #dabebe; /* Alternate background color for odd slides */
+    }
 
-.soap {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
+    .slide:nth-child(even) {
+      background-color: #d4a4a4; /* Alternate background color for even slides */
+    }
 
-.footer-content {
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-}
+    .slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
 
-.footer-text-icons {
-display: flex;
-flex-direction: column;
-text-shadow: 2px 2px 2px black;
-}
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      align-items: center;
+    }
 
-.footer-text-icons b {
-margin-bottom: 5px;
-}
+    .arrow {
+     cursor: pointer;
+     font-size: 50px; /* Increased arrow size */
+     margin-bottom: 30px;
+    }
 
-.footer-logo img {
-max-height: 100px; /* Adjust the height of the logo as needed */
-}
-
-.social-icons a {
-margin: 0 5px;
-text-decoration: none;
-color: #fff;
-}
-
-.social-icons i {
-font-size: 20px;
-}
- </style>
+  </style>
 </head>
+
 <body>
   <div class="code-block" id="code-block">
     <header>
       <img src="../Images/logokc.png" alt="This is the image of a logo">
       <div class="rose" id="rose">
-  <nav>
-     <ul>
-        <a href="../index.html">Home</a>
-        <a href="../Pages/Product.html">Products</a>
-        <a href="Pages/About.html" style="background-color: #000; color: #ccc;">About Us</a>
-        <a href="../Pages/Contact.html">Contact</a>
-        <a href="../Pages/Login.html">Login<i class="fa-solid fa-right-to-bracket"></i></a>
-        <a href="../Pages/Signup.html">Signup</a>
-    </ul>
-</nav>
-</div>
-</header>
- <h1>Hello there, Welcome</h1>
-
- <hr>
-            <div>
-              <footer>
-                <div class="soap" id="soap">
-                <div class="footer-content">
-                  <div class="footer-text-icons">
-                  <b>Please follow us on our socials</b> 👍👍
-                <div class="social-icons">
-              <a href="https://web.facebook.com/?_rdc=1&_rdr" style="color: #000;"><i class="fa-brands fa-facebook"></i></a> 
-              <a href="https://x.com/?lang=en" style="color: #000;"><i class="fa-brands fa-twitter"></i></a>
-              <a href="https://www.instagram.com/" style="color: #000;"><i class="fa-brands fa-instagram"></i></a> 
-              <a href="https://www.linkedin.com/login" style="color: #000;"><i class="fa-brands fa-linkedin"></i></a>
+        <nav>
+          <ul>
+            <a href="../index.html">Home</a>
+            <a href="../Pages/Product.html">Products</a>
+            <a href="Pages/About.html" style="background-color: #000; color: #ccc;">About Us</a>
+            <a href="../Pages/Contact.html">Contact Us</a>
+            <a href="../Pages/Login.html">Login<i class="fa-solid fa-right-to-bracket"></i></a>
+            <a href="../Pages/Signup.html">Signup</a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <h1 id="hello">Hello there,</h1>
+    <div class="container" style="background-color: #e5e2a0;">
+      <div class="text">
+        <p>At Korena Claudia, We Connect Africa's Bounty to the World.</p>
+        <p>Here at Korena Claudia, we're passionate about bringing the rich tapestry of Africa's raw materials to the global market.</p>
+      </div>
+      <div class="image">
+        <img src="../Images/Breath-taking.jpg" alt="">
+      </div>
+    </div>
+    <div class="container" style="background-color: rgb(253, 253, 193);">
+      <div class="image">
+        <img src="../Images/banana.jpg" alt="This is an image of a banana">
+      </div>
+      <div class="text">
+        <p>We source ethically and sustainably from across the continent, working directly with farmers and cooperatives to ensure fair trade practices and empower local communities.</p>
+      </div>
+    </div>
+    <div class="container" style="background-color: #e5e2a0;;">
+      <div class="text">
+        <p>Our commitment extends beyond just sourcing. We prioritize preserving traditional harvesting methods and minimizing environmental impact.</p>
+        <p>From sun-dried Ethiopian coffee beans to vibrant Ghanaian shea butter, each product embodies the unique character of its origin.</p>
+      </div>
+      <div class="image">
+        <img src="../Images/African Wheat.jpg" alt="This is an image of African wheat">
+      </div>
+    </div>
+    <div class="motive">
+      <h2 style="margin-left: 150px;"><i>Why Choose Korena Claudia?</i>🤔💭</h2>
+      <p><b>Authenticity:</b> We source directly from Africa, ensuring the highest quality and genuine products.</p>
+      <p><b>Sustainability:</b> We prioritize responsible sourcing and environmental practices.</p>
+      <p><b>Fair Trade:</b> We empower local communities through fair prices and partnerships.</p>
+      <p><b>Variety:</b> Explore a diverse range of raw materials, from essential oils to exotic spices.</p>
+    </div>
+    <!-- slideshow -->
+    <div class="slideshow-container">
+      <div class="slides">
+        <div class="slide">
+          <img src="../Images/Pear.jpg" alt="This is an image of an avocado pear">
+          <div>
+            <h4>Avocado</h4>
+            <p>It's widely cultivated in Africa and enjoys global popularity for its creamy flesh, large single seed, and versatility in various dishes.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="../Images/Cashews.jpg" alt="This is a picture of a Cashews nut">
+          <div>
+            <h4>African Cashew</h4>
+            <p>Africa boasts a growing industry of delicious roasted and flavored cashews, offering a taste of sunshine and supporting local communities.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="../Images/Gari.jpg" alt="This is an image of Gari">
+          <div>
+            <h4>Gari</h4>
+            <p>Gari, the beloved Ghanaian staple food made from cassava dough, is a versatile and nutritious treasure.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="../Images/African Shea.jpg" alt="This is an image of Shea butter">
+          <div>
+            <h4>Shea Butter</h4>
+            <p>Shea butter is extracted from the nuts of the African shea tree. It's rich in vitamins and is commonly used in cosmetics and moisturizers.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="../Images/Coffee.jpg" alt="This is an image of African coffee beans">
+          <div>
+            <h4>African Coffee</h4>
+            <p>African coffee is known for its rich flavors and aromas. Each region offers a unique taste profile, making it a favorite among coffee enthusiasts.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="../Images/Pear.jpg" alt="This is an image of an avocado pear">
+          <div>
+            <h4>Avocado</h4>
+            <p>It's widely cultivated in Africa and enjoys global popularity for its creamy flesh, large single seed, and versatility in various dishes.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="../Images/Cashews.jpg" alt="This is a picture of a Cashews nut">
+          <div>
+            <h4>African Cashew</h4>
+            <p>Africa boasts a growing industry of delicious roasted and flavored cashews, offering a taste of sunshine and supporting local communities.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="../Images/Gari.jpg" alt="This is an image of Gari">
+          <div>
+            <h4>Gari</h4>
+            <p>Gari, the beloved Ghanaian staple food made from cassava dough, is a versatile and nutritious treasure.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="../Images/African Shea.jpg" alt="This is an image of Shea butter">
+          <div>
+            <h4>Shea Butter</h4>
+            <p>Shea butter is extracted from the nuts of the African shea tree. It's rich in vitamins and is commonly used in cosmetics and moisturizers.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="../Images/Coffee.jpg" alt="This is an image of African coffee beans">
+          <div>
+            <h4>African Coffee</h4>
+            <p>African coffee is known for its rich flavors and aromas. Each region offers a unique taste profile, making it a favorite among coffee enthusiasts.</p>
+          </div>
+        </div>
+      </div>
+      <div class="navigation">
+        <div class="arrow" onclick="prevSlide()">&#10094;</div>
+        <div class="arrow" onclick="nextSlide()">&#10095;</div>
+      </div>
+    </div>
+    <footer>
+      <div class="soap">
+        <div class="footer-content">
+          <div class="footer-text-icons">
+            <b>Korena Claudia</b>
+            <p>Connecting Africa's Bounty to the World.</p>
+            <div class="social-icons">
+              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
             </div>
-             </div>
-           <div class="footer-logo">
-        <img src="../Images/logokc.png" alt="This is the image of a logo">
+          </div>
+          <div class="footer-logo">
+            <img src="../Images/logokc.png" alt="Logo">
+          </div>
+        </div>
       </div>
-      </div>
-      </div>
-    </footer>   
-    </form>
-    <script src="src/index.js"></script>
+    </footer>
+   
+    //JavaScript for slideshow functionality
+    <script>
+      let slideIndex = 0;
+      const slides = document.querySelector('.slides');
+      const slideItems = document.querySelectorAll('.slide');
+      const totalSlides = slideItems.length;
+    
+      function showSlides() {
+        slides.style.transform = `translateX(-${slideIndex * (100 / 3)}%)`;
+      }
+    
+      function nextSlide() {
+        slideIndex = (slideIndex + 1) % (totalSlides - 2); // -2 to keep within bounds
+        showSlides();
+      }
+    
+      function prevSlide() {
+        slideIndex = slideIndex > 0 ? slideIndex - 1 : totalSlides - 3; // -3 to keep within bounds
+        showSlides();
+      }
+    
+      // Initially show the slides
+      showSlides();
+    
+      // Set interval for automatic rotation
+      setInterval(nextSlide, 10000);
+    
+    //about us Page functionality
+    //using the name the user provided above, to welcome him to the about us page
+  //   function welcome(){//welcomes the user
+  //   let hello=document.getElementById("hello");
+  //   hello.innerHTML=`Hello ${name}, Welcome to the About Us page where you get to learn more about the richness of Africa.💖`;
+  //   hello.style.textShadow= "2px 2px 2px white";
+  //   } 
+    
+  //   let about= document.getElementById("hello");
+  //   about.addEventListener("mouseenter", welcome);
+
+  // const userName = promptName(); // Call the function from index.js
+  // console.log("name", hello); // Example usage
+   
+  // Get the welcome message element
+  const helloElement = document.getElementById("hello");
+
+// Function to welcome the user with retrieved name
+function welcome(userName) {
+  helloElement.innerHTML = `Hello ${userName}, Welcome to the About Us page where you get to learn more about the richness of Africa. `;
+  helloElement.style.textShadow = "2px 2px 2px white";
+}
+
+// Function to retrieve user's name (replace with your actual implementation)
+function promptName() {
+  const userName = prompt("Enter your name:");
+  return userName;
+}
+
+// Call promptName() only once to prevent multiple prompts
+const userName = promptName();
+
+// Call welcome() after name retrieval to update the message
+welcome(userName);
+
+// Optional event listener for potential future enhancements
+aboutElement.addEventListener("mouseenter", welcome); // Uncomment if needed
+
+    </script>
+
+    <script src="../src/index.js"></script>
 </body>
 </html>
+
+  
+
+
+
+
