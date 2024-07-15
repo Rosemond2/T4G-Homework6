@@ -100,6 +100,13 @@
     font-size: 20px;
 }
 
+/*styling the form section*/
+.form-block{
+  width: 40%;
+  background-color: wheat;
+  height: auto;
+}
+
 </style>
 </head>
 <body>
@@ -124,9 +131,10 @@
   </div>
 <div class="text-container">
   <h1>Welcome to the Signup Page!</h1>
-  <p>Fill out the form below to create your account.</p>
   </div>
   
+  <div class="form-block">
+  <p>Fill out the form below to create your account.</p>
    <form action="/submit_form" method="post" id="myForm">
     <label for="title">Title:</label>
 <select id="title" name="title">
@@ -163,7 +171,8 @@
     <div>
       <input type="reset" value="Send" class="submit-button">
     </div>
-   
+  </div>
+
   <hr>
 <div>   
   <footer>
