@@ -121,6 +121,13 @@
   height: auto;
   box-shadow: 0 4px 8px black; /* Add shadow to the image */
 }
+.box{ /*styling to increase the text area of my form*/
+   width: 40%;
+   height: 35px;
+}
+#send:hover{/*styling to bring the hover effect on the send button*/
+    background-color: #007BFF;
+}
 
       </style>
 </head>
@@ -148,11 +155,11 @@
     <div class="form">
     <form action="/submit_form" method="post" id="myForm">
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Email" required><br>
+        <input type="email" name="email" id="email" placeholder="Email" required class="box"><br>
         <label for="Password">Password</label><br>
-        <input type="text" id="password" name="password" placeholder="password" required><i id="togglePassword" class="fas fa-eye-slash"></i><br>
+        <input type="text" id="password" name="password" placeholder="password" required class="box"><i id="togglePassword" class="fas fa-eye-slash"></i><br>
         <div>
-          <input type="reset" value="Send" class="submit-button">
+          <input type="reset" value="Send" class="submit-button" id="send">
         </div>
       </div>
       <div class="image">
