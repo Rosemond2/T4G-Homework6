@@ -106,6 +106,45 @@
   background-color: wheat;
   height: auto;
 }
+.box{ /*styling to increase the text area of my form*/
+   width: 40%;
+   height: 35px;
+}
+#send:hover{/*styling to bring the hover effect on the send button*/
+    background-color: #007BFF;
+}
+
+
+.password-container {
+    position: relative;
+    width: 300px;
+    margin: 5px;
+    text-align: left;
+}
+
+.password-container label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.password-container input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.eye-icon {
+    font-size: 20px;
+}
+
+
 
 </style>
 </head>
@@ -137,20 +176,20 @@
   <p>Fill out the form below to create your account.</p>
    <form action="/submit_form" method="post" id="myForm">
     <label for="title">Title:</label>
-<select id="title" name="title">
+<select id="title" name="title" style="height: 35px; width: 15%;">
   <option value="Mr">Mr.</option>
   <option value="Ms">Ms.</option>
   <option value="Mrs">Mrs.</option>
   <option value="Dr">Dr.</option>
   </select><br>
     <label for="name">First name</label>
-    <input type="name" id="name" name="name" placeholder="Your First Name" required><br>
+    <input type="name" id="name" name="name" placeholder="Your First Name" required class="box"><br>
      <label for="name">Last name</label>
-     <input type="name" id="name" placeholder="Your Last Name" required><br>
+     <input type="name" id="name" placeholder="Your Last Name" required class="box"><br>
      <label for="name">Other Names</label>
-     <input type="name" id="name" placeholder="Other Names"><br>
+     <input type="name" id="name" placeholder="Other Names" class="box"><br>
      <label for="sufflix">Sufflix</label>
-     <select name="sufflix" id="sufflix">
+     <select name="sufflix" id="sufflix" style="height: 35px; width: 15%;">
       <option value="Jnr">Jnr.</option>
       <option value="Snr">Snr.</option>
       <option value="I">I</option>
@@ -158,20 +197,32 @@
       <option value="III">III</option>
      </select><br>
      <label for="phone">phone</label>
-     <input type="phone" name="phone" id="phone"><br>
+     <input type="phone" name="phone" id="phone" class="box"><br>
      <label for="dateOfBirth">Date of Birth:</label>
      <input type="date" id="dateOfBirth" name="dateOfBirth" 
-            placeholder="YYYY-MM-DD" required><br>
+            placeholder="YYYY-MM-DD" required class="box"><br>
     <label for="email">Email:</label>
-    <input type="email" name="email" id="email" placeholder="Email" required><br>
+    <input type="email" name="email" id="email" placeholder="Email" required class="box"><br>
+   <div class="password-container">
     <label for="password">Password</label>
-    <input type="password" name="password" id="password" required><br>
-    <label for="confirmPassword">Re-enter Password</label>
-    <input type="password" name="confirmPassword" id="confirmPassword" required><br>
+    <input type="password" name="password" id="password" required class="box"><br>
+    <span class="toggle-password" id="toggle-password">
+      <i class="eye-icon" id="eye-open-password">&#128065;</i> <!-- Open eye icon -->
+      <i class="eye-icon" id="eye-closed-password" style="display: none;">&#128065;&#65039;</i> <!-- Closed eye icon -->
+  </span>
+   </div>
+   <div class="password-container">
+    <label for="reenter-password">Re-enter Password</label>
+    <input type="password" name="reenter-password" id="reenter-password" required class="box"><br>
+    <span class="toggle-password" id="toggle-reenter-password">
+      <i class="eye-icon" id="eye-open-reenter">&#128065;</i> <!-- Open eye icon -->
+      <i class="eye-icon" id="eye-closed-reenter" style="display: none;">&#128065;&#65039;</i> <!-- Closed eye icon -->
+  </span>
+</div>
     <div>
-      <input type="reset" value="Send" class="submit-button">
+      <input type="reset" value="Send" class="submit-button" id="send">
     </div>
-  </div>
+</div>
 
   <hr>
 <div>   
@@ -197,5 +248,34 @@
 
    </form>
   </div>
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const togglePasswordVisibility = (passwordInputId, eyeOpenId, eyeClosedId) => {
+        const passwordInput = document.getElementById(passwordInputId);
+        const eyeOpen = document.getElementById(eyeOpenId);
+        const eyeClosed = document.getElementById(eyeClosedId);
+
+        const toggleVisibility = () => {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeOpen.style.display = 'none';
+                eyeClosed.style.display = 'inline';
+            } else {
+                passwordInput.type = 'password';
+                eyeOpen.style.display = 'inline';
+                eyeClosed.style.display = 'none';
+            }
+        };
+
+        eyeOpen.addEventListener('click', toggleVisibility);
+        eyeClosed.addEventListener('click', toggleVisibility);
+    };
+
+    togglePasswordVisibility('password', 'eye-open-password', 'eye-closed-password');
+    togglePasswordVisibility('reenter-password', 'eye-open-reenter', 'eye-closed-reenter');
+});
+
+
+  </script>
 </body>
 </html>
