@@ -101,28 +101,28 @@
 }
 
 /* styling the body, added an image to it */
-.image-and-form {
+/* .image-and-form {
   display: grid;
   grid-template-columns: 200px 1fr;  /* Define columns: image, form */
-  align-items: center;  /* Align content vertically */
-}
+  /* align-items: center;  /* Align content vertically */
+/* }
 
 .image-and-form img {
   width: 100%;  /* Fill image container width */
-  height: auto;  /* Maintain aspect ratio */
-}
+  /* height: auto;  /* Maintain aspect ratio */
+/* } */ */
 
-.overlay{
+/* .overlay{
   background-color: rgb(243, 227, 197);
 }
 
 h3{
   margin-left: 200px;
   font-style: italic;
-}
+} */ */ */
 
 /* styling the contact form */
-.contact-block {
+/* .contact-block {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
@@ -139,13 +139,57 @@ h3{
             width: 100%;
             height: auto;
             box-shadow: 0 4px 8px black; /* Add shadow to the image */
-        }
+        
         
         
         /* styling the notes that come before the footer*/
-        .conclusion{
+        /* .conclusion{
           text-shadow: 2ppx 2px 2px white;
+        } */ */ */
+
+         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+         h1 { text-align: center; color: #333; }
+        .contact-methods { display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 20px; }
+        .contact-method { flex: 1 1 30%; box-sizing: border-box; padding: 10px; margin: 10px; border: 1px solid #ddd; border-radius: 5px; text-align: center; }
+        .contact-method a { color: #007BFF; text-decoration: none; }
+        .contact-form { background: #f9f9f9; padding: 20px; border-radius: 5px; }
+        .contact-form input, .contact-form textarea { width: 50%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        .contact-form button { background: #007BFF; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        .contact-form button:hover { background: #0056b3; }
+        @media (max-width: 768px) {
+            .contact-method { flex: 1 1 100%; }
         }
+
+        .form-set{
+          display: flex; 
+          align-items: flex-start; 
+          justify-content: space-between;
+          
+        }
+        .image-container {
+            width: 50%;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px black; /* Add shadow to the image */
+         }
+       
+         .form-container {
+            width: 50%;
+         }
+         
+       #send:hover{/*styling to bring the hover effect on the send button*/
+        background-color: #007BFF;
+       }
+       #form-background{/*styling to give the foem a background color*/
+        background-color: rgb(184, 184, 160);
+       }
+       .box{ /*styling to increase the text area of my form*/
+        width: 40%;
+        height: 35px;
+       }
+
       </style>
     
 </head>
@@ -169,8 +213,47 @@ h3{
 
     <h1 style="margin-left: 500px;"><u>Let's Connect!</u>💃</h1>
     <img src="../Images/cartoon.jpg" alt="This is an image of a cartoon">
-    <div class="overlay">
-     <p>We'd love to hear from you! Whether you have a question, a comment, or just want to say hello, feel free to reach out using one of the methods below.</p>
+    <!-- <div class="overlay"> -->
+      <div class="container">
+      <h1>Contact Us</h1>
+        <div class="contact-methods">
+            <div class="contact-method">
+                <h2>Email</h2>
+                <p><a href="mailto:roseomdgyi04@gmail.com">roseomdgyi04@gmail.com</a></p>
+            </div>
+            <div class="contact-method">
+                <h2>Phone</h2>
+                <p><a href="tel:0544888012">0544888012</a></p>
+            </div>
+            <div class="contact-method">
+                <h2>Social Media</h2>
+                <p><a href="https://www.facebook.com">Facebook</a></p>
+                <p><a href="https://www.twitter.com">Twitter</a></p>
+                <p><a href="https://www.instagram.com">Instagram</a></p>
+            </div>
+        </div>
+        
+        <div id="form-background">
+        <h2>Contact Form</h2>
+        <div class="form-set">
+          <div class="form-container">
+            <form action="#" method="post">
+              <label for="name">Your name:</label>
+                <input type="text" name="name" placeholder="Your Full Name" required class="box"><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Email" required class="box">
+                <label for="message"><p>Message:</p></label>
+                <textarea name="message" placeholder="Message" required  rows="10" cols="50"></textarea><br>
+                <button type="submit" id="send">Send</button>
+            </form>
+          </div>
+            <div class="image-container">
+              <img src="../Images/Waterfall.jpg" alt="This is an image of a waterfall">
+          </div>
+        </div>
+      </div>
+        
+     <!-- <p>We'd love to hear from you! Whether you have a question, a comment, or just want to say hello, feel free to reach out using one of the methods below.</p>
     
     <h3>Here's how you can get in touch:😊</h3>
       <p>Email<i class="fa-solid fa-envelope"></i>: Drop us a line at <a href="rosemondgyi04@gmail.com" style="text-decoration: none; font-style: italic;">rosemondgyi04@gmail.com</a>. We aim to respond to all emails within 24 business hours.</p>
@@ -211,7 +294,7 @@ h3{
    <p> "Sign in to view your support history and track the status of your inquiries."</p>
    <p> Don't have an account? <a href="../Pages/Signup.html"><button><u> click to Signup</u></button></a></p>
   </div>
-</div>
+</div> -->
       <hr>
     
       
