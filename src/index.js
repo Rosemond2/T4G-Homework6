@@ -71,5 +71,3 @@ let closeImages = document.getElementById("close");
 closeImages.addEventListener("click", vanish);
 
 
-
-
