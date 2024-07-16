@@ -100,95 +100,64 @@
     font-size: 20px;
 }
 
-/* styling the body, added an image to it */
-/* .image-and-form {
-  display: grid;
-  grid-template-columns: 200px 1fr;  /* Define columns: image, form */
-  /* align-items: center;  /* Align content vertically */
-/* }
 
-.image-and-form img {
-  width: 100%;  /* Fill image container width */
-  /* height: auto;  /* Maintain aspect ratio */
-/* } */ */
+ /* styling the notes that come before the footer*/
+ .conclusion{
+   text-shadow: 2ppx 2px 2px white;
+   background-color: #007BFF;
+  } 
 
-/* .overlay{
-  background-color: rgb(243, 227, 197);
-}
+ .container { width: 100%; margin: 0 auto; padding: 20px; }
+  h1 { text-align: center; color: #333; }
+  .contact-methods { display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 20px; }
+  .contact-method { flex: 1 1 30%; box-sizing: border-box; padding: 10px; margin: 10px; border: 1px solid #ddd; border-radius: 5px; text-align: center; }
+  .contact-method a { color: #007BFF; text-decoration: none; }
+  .contact-form { background: #f9f9f9; padding: 20px; border-radius: 5px; }
+  .contact-form input, .contact-form textarea { width: 50%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; }
+  .contact-form button { background: #007BFF; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+  .contact-form button:hover { background: #0056b3; }
+   @media (max-width: 768px) {
+    .contact-method { flex: 1 1 100%; }
+  }
 
-h3{
-  margin-left: 200px;
-  font-style: italic;
-} */ */ */
-
-/* styling the contact form */
-/* .contact-block {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 20px;
-            background-color: rgb(241, 210, 151);
-        }
-        .form-container {
-            width: 50%;
-        }
-        .image-container {
-            width: 50%;
-        }
-        .image-container img {
-            width: 100%;
-            height: auto;
-            box-shadow: 0 4px 8px black; /* Add shadow to the image */
+  .form-set{
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: space-between;
+  }
         
+  .image-container {
+    width: 50%;
+  }
         
-        
-        /* styling the notes that come before the footer*/
-        /* .conclusion{
-          text-shadow: 2ppx 2px 2px white;
-        } */ */ */
-
-         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
-         h1 { text-align: center; color: #333; }
-        .contact-methods { display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 20px; }
-        .contact-method { flex: 1 1 30%; box-sizing: border-box; padding: 10px; margin: 10px; border: 1px solid #ddd; border-radius: 5px; text-align: center; }
-        .contact-method a { color: #007BFF; text-decoration: none; }
-        .contact-form { background: #f9f9f9; padding: 20px; border-radius: 5px; }
-        .contact-form input, .contact-form textarea { width: 50%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; }
-        .contact-form button { background: #007BFF; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
-        .contact-form button:hover { background: #0056b3; }
-        @media (max-width: 768px) {
-            .contact-method { flex: 1 1 100%; }
-        }
-
-        .form-set{
-          display: flex; 
-          align-items: flex-start; 
-          justify-content: space-between;
-          
-        }
-        .image-container {
-            width: 50%;
-        }
-        .image-container img {
-            width: 100%;
-            height: auto;
-            box-shadow: 0 4px 8px black; /* Add shadow to the image */
-         }
+  .image-container img {
+     width: 100%;
+     height: auto;
+     box-shadow: 0 4px 8px black; /* Add shadow to the image */
+    }
        
-         .form-container {
-            width: 50%;
-         }
+   .form-container {
+     width: 50%;
+    }
          
-       #send:hover{/*styling to bring the hover effect on the send button*/
+   #send{
+     width: 50px;
+     height: 30px;
+    }
+       
+    #send:hover{/*styling to bring the hover effect on the send button*/
         background-color: #007BFF;
-       }
-       #form-background{/*styling to give the foem a background color*/
+    }
+       
+    #form-background{/*styling to give the foem a background color*/
         background-color: rgb(184, 184, 160);
-       }
-       .box{ /*styling to increase the text area of my form*/
+        margin-right: 40px;
+    }
+       
+    .box{ /*styling to increase the text area of my form*/
         width: 40%;
         height: 35px;
-       }
+    }
 
       </style>
     
@@ -211,25 +180,26 @@ h3{
     </div>
     </header>
 
-    <h1 style="margin-left: 500px;"><u>Let's Connect!</u>💃</h1>
+    <h1 style="margin-left: 500px;" id="connect"><u>Let's Connect!</u>💃</h1>
     <img src="../Images/cartoon.jpg" alt="This is an image of a cartoon">
     <!-- <div class="overlay"> -->
       <div class="container">
       <h1>Contact Us</h1>
         <div class="contact-methods">
             <div class="contact-method">
-                <h2>Email</h2>
+                <h2>Email<i class="fa-solid fa-envelope"></i></h2>
                 <p><a href="mailto:roseomdgyi04@gmail.com">roseomdgyi04@gmail.com</a></p>
             </div>
             <div class="contact-method">
-                <h2>Phone</h2>
+                <h2>Phone<i class="fa-solid fa-phone"></i></h2>
                 <p><a href="tel:0544888012">0544888012</a></p>
             </div>
             <div class="contact-method">
-                <h2>Social Media</h2>
-                <p><a href="https://www.facebook.com">Facebook</a></p>
-                <p><a href="https://www.twitter.com">Twitter</a></p>
-                <p><a href="https://www.instagram.com">Instagram</a></p>
+                <h2>Social Media<i class="fa-solid fa-hashtag"></i></h2>
+                <p><a href="https://www.facebook.com" style="text-shadow: 2px 2px 2px white;">Facebook</a></p>
+                <p><a href="https://www.twitter.com" style="text-shadow: 2px 2px 2px white;">Twitter</a></p>
+                <p><a href="https://www.instagram.com" style="text-shadow: 2px 2px 2px white;">Instagram</a></p>
+                <p><a href="https://www.linkedin.com/login" style="text-shadow: 2px 2px 2px white;">linkedin</a></p>
             </div>
         </div>
         
@@ -243,7 +213,7 @@ h3{
                 <label for="email">Email:</label>
                 <input type="email" name="email" placeholder="Email" required class="box">
                 <label for="message"><p>Message:</p></label>
-                <textarea name="message" placeholder="Message" required  rows="10" cols="50"></textarea><br>
+                <textarea name="message" placeholder="Message" required  rows="10" cols="50" style="margin: 5px;"></textarea><br>
                 <button type="submit" id="send">Send</button>
             </form>
           </div>
@@ -251,53 +221,17 @@ h3{
               <img src="../Images/Waterfall.jpg" alt="This is an image of a waterfall">
           </div>
         </div>
-      </div>
-        
-     <!-- <p>We'd love to hear from you! Whether you have a question, a comment, or just want to say hello, feel free to reach out using one of the methods below.</p>
-    
-    <h3>Here's how you can get in touch:😊</h3>
-      <p>Email<i class="fa-solid fa-envelope"></i>: Drop us a line at <a href="rosemondgyi04@gmail.com" style="text-decoration: none; font-style: italic;">rosemondgyi04@gmail.com</a>. We aim to respond to all emails within 24 business hours.</p>
-        <p>Phone<i class="fa-solid fa-phone"></i>: Give us a call at <a href="0544888012" style="text-decoration: none; font-style: italic;">0544888012</a> during our business hours: <i>Monday-Saturday; 8am-5pm </i>.</p>
-        <p>Social Media<i class="fa-solid fa-hashtag"></i>: Follow us on social media for the latest updates and announcements: </p>
-           <li><i class="fa-brands fa-facebook"><a href="https://web.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=100" style="font-size: 15px; text-decoration: none;">            https://web.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=100</a> </i></li>
-            <li><i class="fa-brands fa-twitter"><a href="https://x.com/?lang=en" style="font-size: 15px; text-decoration: none;">        https://x.com/?lang=en</a></i></li>
-            <li><i class="fa-brands fa-instagram"><a href="https://www.instagram.com/" style="font-size: 15px; text-decoration: none;">         https://www.instagram.com/</a></i></li>
-            <li><i class="fa-brands fa-youtube"><a href="https://www.youtube.com/" style="font-size: 15px; text-decoration: none;">          https://www.youtube.com/</a></i></li>
-            <li><i class="fa-brands fa-linkedin"><a href="https://www.linkedin.com/login" style="font-size: 15px; text-decoration: none;">         https://www.linkedin.com/login</a></i></li>
-        <div>
+    </div> 
 
-          
-        <p style="text-shadow: 2px 2px 2px white; font-size: 35px;">Contact Form<i class="fa-solid fa-text-slash"></i>: For your convenience, you can also fill out the form below and we'll get back to you as soon as possible.</p>
-      <div class="contact-block">
-        <div class="form-container">
-            <form action="/submit_form" method="post" id="myForm">
-                <label for="name">Your name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Full Name" required><br><br>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Email" required><br><br>
-                <label for="message"><p>Message:</p></label>
-                <textarea name="message" id="message" rows="10" cols="70" placeholder="Enter text here"></textarea><br>
-              <div>
-            <input type="reset" value="Send" class="submit-button">
-          </div>
-            </form>
-        </div>
-        <div class="image-container">
-            <img src="../Images/Waterfall.jpg" alt="This is an image of a waterfall">
-        </div>
-    </div>
-    
     <div class="conclusion">
-  <p>We appreciate your feedback!</p>
-   <p>Your input is valuable to us, and we strive to provide the best possible experience. Don't hesitate to share your thoughts or suggestions.</p>
-   <p> "Login to unlock access to our full range of support options and specialized resources.<a href="../Pages/Login.html"><button><u>click to Login</u></button></a></p>
-   <p> "Sign in to view your support history and track the status of your inquiries."</p>
-   <p> Don't have an account? <a href="../Pages/Signup.html"><button><u> click to Signup</u></button></a></p>
-  </div>
-</div> -->
+    <p>We appreciate your feedback!</p>
+    <p>Your input is valuable to us, and we strive to provide the best possible experience. Don't hesitate to share your thoughts or suggestions.</p>
+    <p> "Login to unlock access to our full range of support options and specialized resources.<a href="../Pages/Login.html"><button><u>click to Login</u></button></a></p>
+    <p> "Sign in to view your support history and track the status of your inquiries."</p>
+    <p> Don't have an account? <a href="../Pages/Signup.html"><button><u> click to Signup</u></button></a></p>
+    </div>
+
       <hr>
-    
-      
       <footer>
         <div class="soap" id="soap">
         <div class="footer-content">
@@ -319,6 +253,13 @@ h3{
 
     </div>
   </div>
-
+  <script>
+    //when the mouse enters the h1 ele(let's connect), it will alert a piece of text to welcome the user.
+function pieceOfText(){
+    alert("We'd love to hear from you! Whether you have a question, a comment, or just want to say hello, feel free to reach out using one of the methods below.")
+}
+let connect=document.getElementById("connect");
+connect.addEventListener("mouseenter", pieceOfText);
+  </script>
 </body>
 </html>
