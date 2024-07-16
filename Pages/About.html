@@ -197,7 +197,7 @@
           <ul>
             <a href="../index.html">Home</a>
             <a href="../Pages/Product.html">Products</a>
-            <a href="Pages/About.html" style="background-color: #000; color: #ccc;">About Us</a>
+            <a href="Pages/About.html" style="background-color: #000; color: #ccc;" id="navigation">About Us</a>
             <a href="../Pages/Contact.html">Contact Us</a>
             <a href="../Pages/Login.html">Login<i class="fa-solid fa-right-to-bracket"></i></a>
             <a href="../Pages/Signup.html">Signup</a>
@@ -371,41 +371,14 @@
     
     //about us Page functionality
     //using the name the user provided above, to welcome him to the about us page
-  //   function welcome(){//welcomes the user
-  //   let hello=document.getElementById("hello");
-  //   hello.innerHTML=`Hello ${name}, Welcome to the About Us page where you get to learn more about the richness of Africa.💖`;
-  //   hello.style.textShadow= "2px 2px 2px white";
-  //   } 
-    
-  //   let about= document.getElementById("hello");
-  //   about.addEventListener("mouseenter", welcome);
-
-  // const userName = promptName(); // Call the function from index.js
-  // console.log("name", hello); // Example usage
-   
-  // Get the welcome message element
-  const helloElement = document.getElementById("hello");
-
-// Function to welcome the user with retrieved name
-function welcome(userName) {
-  helloElement.innerHTML = `Hello ${userName}, Welcome to the About Us page where you get to learn more about the richness of Africa. `;
-  helloElement.style.textShadow = "2px 2px 2px white";
-}
-
-// Function to retrieve user's name (replace with your actual implementation)
-function promptName() {
-  const userName = prompt("Enter your name:");
-  return userName;
-}
-
-// Call promptName() only once to prevent multiple prompts
-const userName = promptName();
-
-// Call welcome() after name retrieval to update the message
-welcome(userName);
-
-// Optional event listener for potential future enhancements
-aboutElement.addEventListener("mouseenter", welcome); // Uncomment if needed
+   function user(){
+   let name= prompt("What is your name please");
+    let change=document.getElementById("hello");
+    change.innerHTML=`Hello ${name}, in this page you get to learn more about what we do and what we are about. Happy learning😎`;
+    change.style.textShadow= "2px 2px 2px white";
+   }
+  let welcome=document.querySelector("#navigation");
+  welcome.addEventListener("mouseleave", user);
 
     </script>
 
