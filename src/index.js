@@ -20,6 +20,20 @@ function alertSpiceLink(){//alerting external link to African spices
 let spice = document.querySelector("#spices");
 spice.addEventListener("click", alertSpiceLink);
 
+function alertImageChange(){
+    let imagechange= document.getElementById("spices");
+    imagechange.style.width= "300px";
+    imagechange.style.height= "300px";
+    let normal= document.getElementById("spices");
+    normal.style.width= "30%";
+    normal.style.height= "20%";
+}
+let change= document.getElementById("spices");
+change.addEventListener("mouseenter", alertImageChange);
+
+let imageDecrease= document.getElementById("spices");
+imageDecrease.addEventListener("mouseleave", alertImageChange);
+
 function alertFruitLink(){//alerting external link to African fruits
     alert("https://www.google.com/search?q=african+fruits&client=firefox-b-d&sca_esv=f30a9b7fa8506153&sca_upv=1&sxsrf=ADLYWIKut94K9NbYwnCgsHCsJSIqourlug%3A1720434610292&ei=sr-LZt_IEeCGhbIPqPic6A0&oq=african+fr&gs_lp=Egxnd3Mtd2l6LXNlcnAiCmFmcmljYW4gZnIqAggAMgsQABiABBiRAhiKBTILEAAYgAQYkQIYigUyCxAAGIAEGJECGIoFMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEjqLVCBBVjQGHABeAGQAQCYAZ8CoAHmD6oBAzItOLgBAcgBAPgBAZgCBaACpAjCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICDhAAGLADGOQCGNYE2AEBwgITEC4YgAQYsAMYQxjIAxiKBdgBAsICFhAuGIAEGLADGEMY1AIYyAMYigXYAQLCAgoQIxiABBgnGIoFwgIKEAAYgAQYQxiKBcICBBAjGCfCAhAQLhiABBixAxjRAxjHARgKwgIKEAAYgAQYsQMYCpgDAIgGAZAGE7oGBggBEAEYCboGBggCEAEYCJIHBTEuMC40oAeVPA&sclient=gws-wiz-serp");
 }
@@ -43,8 +57,8 @@ function loadMore(){//load more images
     let disappear=document.getElementById("more-images");
     disappear.style.display= "none";
 }
-let moreImages = document.getElementById("more-images")
-moreImages.addEventListener("click", loadMore)
+let moreImages = document.getElementById("more-images");
+moreImages.addEventListener("click", loadMore);
 
 //when the user clicks on the 'click to close' button, the other set of images should disappear
 function vanish(){//closes 9 other images
@@ -55,5 +69,7 @@ function vanish(){//closes 9 other images
 }
 let closeImages = document.getElementById("close");
 closeImages.addEventListener("click", vanish);
+
+
 
 
